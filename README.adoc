@@ -9,7 +9,7 @@ If you do decide to publish to Github-Pages you need to enable it in your Github
 
 === Local
 
-. [Install Ruby](https://www.ruby-lang.org/en/documentation/installation/) version 2.4.0 or above (check with `ruby -v`). I had a lot of fun with this one because macOS comes with an old Ruby version. [Rubyenv](https://github.com/rbenv/rbenv#installation) did wonders for me:
+. link:https://www.ruby-lang.org/en/documentation/installation/[Install Ruby] version 2.4.0 or above (check with `ruby -v`). I had a lot of fun with this one because macOS comes with an old Ruby version. [Rubyenv](https://github.com/rbenv/rbenv#installation) did wonders for me (you can skip these steps if you use rbenv or don't want to):
     * `brew install rbenv`  
     * `rbenv init`  
     * Close terminal  
@@ -20,7 +20,7 @@ If you do decide to publish to Github-Pages you need to enable it in your Github
 . Go into the docs directory
   `cd docs`
 . Install all gems:
-  `bundle install`
+  `bundle`
 . Build the site and make it available on a local server:
   `bundle exec jekyll serve`
 . Now browse to http://localhost:4000
@@ -38,7 +38,7 @@ Github does not support all Jekyll plugins however and only supports those it ha
 * `rbenv local 2.6.3`
 * `cd docs`
 * `jekyll new .`
-* Read [Minimal Mistakes Quickstart](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
+* Read link:https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/[Minimal Mistakes Quickstart]
 * `vim Gemfile` and replace `gem "minima", "~> 2.5"` with `gem "minimal-mistakes-jekyll"`
 
 == About Jekyll
