@@ -45,6 +45,11 @@ Github does not support all Jekyll plugins however and only supports those it ha
 
 link:https://jekyllrb.com[Jekyll] is a static site renderer written in Ruby and most notably it is directly supported by Github.
 
+== Minimal Mistakes Config
+
+* Available link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/[layouts]
+* Configure the link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/#custom-sidebar-navigation-menu[docs sidebar]
+
 == Troubleshoot
 
 === Port Occupied
