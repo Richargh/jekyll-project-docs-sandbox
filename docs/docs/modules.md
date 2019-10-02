@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Upgrading
+title: Modules
+permalink: /docs/modules/
 sidebar:
   nav: "docs"
 ---
-

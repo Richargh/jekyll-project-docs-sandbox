@@ -1,6 +1,7 @@
 ---
 layout: home
-title: Tutorials
+title: How-Tos
+permalink: /docs/how-tos/
 sidebar:
   nav: "docs"
 ---

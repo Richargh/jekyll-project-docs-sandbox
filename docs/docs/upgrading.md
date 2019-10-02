@@ -1,6 +1,7 @@
 ---
 layout: home
-title: Versioning
+title: Upgrading
+permalink: /docs/upgrading/
 sidebar:
   nav: "docs"
 ---
