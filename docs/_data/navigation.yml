@@ -3,9 +3,9 @@ main:
   - title: "Docs"
     url: /docs/
   - title: "News"
-    url: /posts/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+    url: /news/
+
+# docs navigation bar
 docs:
   - title: Getting Started
     children:
@@ -34,3 +34,5 @@ docs:
     children:
       - title: "Adding Modules"
         url: /docs/modules/
+      - title: "License"
+        url: /docs/license/
