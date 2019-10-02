@@ -34,5 +34,10 @@ docs:
     children:
       - title: "Adding Modules"
         url: /docs/modules/
+
+  - title: Meta
+    children:
+      - title: "History"
+        url: /docs/history/
       - title: "License"
         url: /docs/license/

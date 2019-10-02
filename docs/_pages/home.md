@@ -8,8 +8,8 @@ header:
     - label: "<i class='fas fa-download'></i> Install now"
       url: "/docs/quick-start-guide/"
 excerpt: >
-  A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />
-  <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.6">Latest release v4.16.6</a></small>
+  A cool project. Perfect for almost everything.<br />
+  <small><a href="https://github.com/Richargh/jekyll-project-docs-sandbox/releases">Latest releases</a></small>
 feature_row:
   - title: "Super installable"
     excerpt: "Easily installable."
