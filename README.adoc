@@ -1,6 +1,6 @@
 = Jekyll Project Docs (Sandbox)
 
-A sandbox to play around in and use Jekyll for project documentation.
+A sandbox to play around in and use Jekyll for project documentation. The project is deployed to http://richargh.github.io/jekyll-project-docs-sandbox automatically.
 
 == Usage
 
