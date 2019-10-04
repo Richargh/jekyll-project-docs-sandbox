@@ -162,6 +162,7 @@ compress_html:
 # Collections: https://jekyllrb.com/docs/collections/
 # Can be used as a type for the #defaults
 # The folder must be named identically to the collection you defined in your _config.yml file, with the addition of the preceding _ character.
+# Remember to define everything as a collection that you want to be able to search for.
 collections:
   docs:
     output: true
