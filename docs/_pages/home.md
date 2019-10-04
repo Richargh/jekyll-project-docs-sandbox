@@ -5,8 +5,10 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/img/background-bit-bytes-2004161[Markus-Spiske-pexels].jpg
   actions:
-    - label: "<i class='fas fa-download'></i> Install now"
+    - label: "<i class='fas fa-fw fa-link'></i> Quick Start"
       url: "/docs/quick-start-guide/"
+    - label: "<i class='fas fa-download'></i> Install now"
+      url: "/docs/installation/"
 excerpt: >
   A cool project. Perfect for almost everything.<br />
   <small><a href="https://github.com/Richargh/jekyll-project-docs-sandbox/releases">Latest releases</a></small>

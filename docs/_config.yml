@@ -1,3 +1,6 @@
+# some of these settings are jekyll Configurations: https://jekyllrb.com/docs/configuration/
+# the others are Minimal Mistakes Configurations: https://mmistakes.github.io/minimal-mistakes/docs/configuration/
+
 
 remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
@@ -17,7 +20,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 words_per_minute         : 200
 
 search                   : true
-search_full_content      : true
+search_full_content      : false
 search_provider          : lunr
 
 social:
@@ -30,13 +33,14 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: https://github.com/Richargh/jekyll-project-docs-sandbox
 
 
 # Reading Files
 include:
   - .htaccess
   - _pages
+  - docs
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -156,13 +160,29 @@ compress_html:
     envs: development
 
 
-# Defaults
+# Front Matter Defaults (https://jekyllrb.com/docs/configuration/front-matter-defaults/)
+# so you don't need to write values like the page template for each file
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "" # an empty string here means all files in the project
+      # define the type so you don't set defaults for every file (.css files would not benefit)
+      # Type can be one of jekyll's defaults: pages, posts, drafts
+      # Everything that’s not a page, a post or a draft can be represented as a collection
+      type: pages
+    values:
+      layout: single
+  - scope:
+      path: "docs"
+      type: pages
+    values:
+      layout: single
+  - scope:
+      path: "_posts"
       type: posts
     values:
       layout: single
       read_time: true
       related: true
+
+# https://jekyllrb.com/docs/collections/
