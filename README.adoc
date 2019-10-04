@@ -66,6 +66,11 @@ Besides defining global variables, the `_config.yml` is also used to configure J
 * Make links standout more with link:https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/#buttons[MM buttons]
 * Place special link:https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/#notices[MM Notice blocks] around text
 
+=== Modifying the Template
+
+MM can be modified by copying files from MM directly and changing their content. Take a look at the files in `_includes`.
+`masthead.html` is almost a complete copy of the MM file. A couple of lines were changed so we can have a stylized button in the navbar that is not compacted into the burger nav bar, when space is rare.
+
 == Draw.io
 
 The `assets/img/*.drawio.*` files can be opened directly with link:https://about.draw.io/integrations/#integrations_offline[Draw.io]. Download Draw.io, click on File->Open and select the file. This is because we exported the image with a complete copy of the diagram in the meta-data.
