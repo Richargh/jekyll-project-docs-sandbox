@@ -59,9 +59,14 @@ In both cases the file is then processed using the link:https://jekyllrb.com/doc
 Besides defining global variables, the `_config.yml` is also used to configure Jekyll and the MM Theme. It also contains some comments that explain what the variables do. To further understand what the variables do it's best to check out the link:https://jekyllrb.com/docs/configuration/[Jekyll Configuration] and the link:https://mmistakes.github.io/minimal-mistakes/docs/configuration/[MM Configuration]. Changes in the `_config.yml` won't be picked up by `bundle exec jekyll serve`. You need to stop and restart that command.
 
 * Available link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/[MM Layouts]
-* Configure the link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/#custom-sidebar-navigation-menu[MM docs sidebar]
+* Create a link:https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery[MM Image Gallery]
+* Change the link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/#custom-sidebar-navigation-menu[MM docs navigation list]
+* Auto-generate link:https://mmistakes.github.io/minimal-mistakes/docs/helpers/#table-of-contents[MM Table of Contents] for a page
+* link:https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/#text-alignment[Align text blocks with MM]
+* Make links standout more with link:https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/#buttons[MM buttons]
+* Place special link:https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/#notices[MM Notice blocks] around text
 
-== DrawIO
+== Draw.io
 
 The `assets/img/*.drawio.*` files can be opened directly with link:https://about.draw.io/integrations/#integrations_offline[Draw.io]. Download Draw.io, click on File->Open and select the file. This is because we exported the image with a complete copy of the diagram in the meta-data.
 
