@@ -61,6 +61,10 @@ Besides defining global variables, the `_config.yml` is also used to configure J
 * Available link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/[MM Layouts]
 * Configure the link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/#custom-sidebar-navigation-menu[MM docs sidebar]
 
+== DrawIO
+
+The `assets/img/*.drawio.*` files can be opened directly with link:https://about.draw.io/integrations/#integrations_offline[Draw.io]. Download Draw.io, click on File->Open and select the file. This is because we exported the image with a complete copy of the diagram in the meta-data.
+
 == Troubleshoot
 
 === Port Occupied
