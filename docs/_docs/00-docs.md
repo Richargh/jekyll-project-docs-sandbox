@@ -5,4 +5,4 @@ title: "Docs"
 
 Supp
 
-![DrawIo](/assets/img/Flow.drawio.svg)
+![DrawIo]({{ '/assets/img/Flow.drawio.svg' | relative_url }})
