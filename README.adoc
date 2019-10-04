@@ -7,6 +7,8 @@ A sandbox to play around in and use Jekyll for project documentation.
 There are two ways to use this template: check that it works locally with a local Jekyll installation or push it to Github directly :) 
 If you do decide to publish to Github-Pages you need to enable it in your Github Repository Settings and for source pick `master branch /docs folder`.
 
+Check below to see how to <<modify-the-docs>>.
+
 === Local
 
 . link:https://www.ruby-lang.org/en/documentation/installation/[Install Ruby] version 2.4.0 or above (check with `ruby -v`). I had a lot of fun with this one because macOS comes with an old Ruby version. [Rubyenv](https://github.com/rbenv/rbenv#installation) did wonders for me (you can skip these steps if you use rbenv or don't want to):
@@ -29,26 +31,35 @@ If you do decide to publish to Github-Pages you need to enable it in your Github
 
 Github uses Jekyll to render static site content for Github-Pages. Content in a top-level _docs folder_ or in a _branch gh-pages_ is automatically rendered.
 
-Github does not support all Jekyll plugins however and only supports those it has whitelisted. If you want asciidoc rendering, you need to put it some effort because that plugin is not whitelisted (21. 8. 2019). Because Github does not support it, you need to **set up your own Jekyll** in your build pipeline and render the content yourself.
+Github does not support all Jekyll plugins however and only supports those it has whitelisted. If you want asciidoc rendering instead of markdown, you need to put it some effort because that plugin is not whitelisted (21. 8. 2019). Because Github does not support it, you need to **set up your own Jekyll** in your build pipeline and render the content yourself.
 
-== Project Creation
+== Modify the docs
+[[modify-the-docs]]
 
-* `mkdir -p <project>/docs`
-* `cd <project>`
-* `rbenv local 2.6.3`
-* `cd docs`
-* `jekyll new .`
-* Read link:https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/[Minimal Mistakes Quickstart]
-* `vim Gemfile` and replace `gem "minima", "~> 2.5"` with `gem "minimal-mistakes-jekyll"`
+This repository uses link:https://jekyllrb.com[Jekyll] and the link:https://mmistakes.github.io/minimal-mistakes/[Minimal Mistakes (MM) Theme].
 
-== About Jekyll
+Jekyll is a static site renderer written in Ruby and most notably it is directly supported by Github. Jekyll can be used for blogs but also project sites. By default it does not provide any look-and-feel for your sites. MM provides that theme (css, layouts, some js etc.) and also adds very nice things like search.
 
-link:https://jekyllrb.com[Jekyll] is a static site renderer written in Ruby and most notably it is directly supported by Github.
+At first sight Jekyll is very simple. Basically "all" it does is copy files from your project structure to the generated folder called `_site`. So if you place an `index.html` in your project root, it'll also be in the root of `_site`. That's not very useful. What creates value is that Jekyll can also modify the files during the copy operation, provided we tell it to: either we place a file in a link:https://jekyllrb.com/docs/structure/[special Jekyll folder], a link: https://jekyllrb.com/docs/collections/[custom collection folder] or we place special link:https://jekyllrb.com/docs/front-matter/[front matter header] at the *beginning* of the file:
 
-== Minimal Mistakes Config
+[source,html]
+----
+---
+title: Some Title
+customVariable: Dave
+---
 
-* Available link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/[layouts]
-* Configure the link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/#custom-sidebar-navigation-menu[docs sidebar]
+<p>Hi {{customVariable}}</p>
+----
+
+In both cases the file is then processed using the link:https://jekyllrb.com/docs/liquid/[Liquid Template Engine] which we can use to replace parts of the file with any variable that is available. Some variables like `{{date}}`` are predefined by Jekyll. But we can also define our own custom variables like ``{{customVariable}}`` in the Front Matter Header or in the `_config.yml`.
+
+=== Configuration
+
+Besides defining global variables, the `_config.yml` is also used to configure Jekyll and the MM Theme. It also contains some comments that explain what the variables do. To further understand what the variables do it's best to check out the link:https://jekyllrb.com/docs/configuration/[Jekyll Configuration] and the link:https://mmistakes.github.io/minimal-mistakes/docs/configuration/[MM Configuration]. Changes in the `_config.yml` won't be picked up by `bundle exec jekyll serve`. You need to stop and restart that command.
+
+* Available link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/[MM Layouts]
+* Configure the link:https://mmistakes.github.io/minimal-mistakes/docs/layouts/#custom-sidebar-navigation-menu[MM docs sidebar]
 
 == Troubleshoot
 
@@ -56,3 +67,13 @@ link:https://jekyllrb.com[Jekyll] is a static site renderer written in Ruby and 
 
 * `netstat -vanp tcp | grep 4000`
 * `kill <pid>`
+
+== Initial Project Creation
+
+* `mkdir -p <project>/docs`
+* `cd <project>`
+* `rbenv local 2.6.3`
+* `cd docs`
+* `jekyll new .`
+* Read link:https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/[Minimal Mistakes Quickstart]
+* Set the remote theme: `remote_theme: "mmistakes/minimal-mistakes"`
