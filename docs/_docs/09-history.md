@@ -1,4 +1,5 @@
 ---
+permalink: /docs/history/
 title: "History of your project"
 
 excerpt: "Baz Boom design system including logo mark, website design, and branding applications."

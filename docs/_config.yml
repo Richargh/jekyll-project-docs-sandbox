@@ -163,6 +163,7 @@ compress_html:
 # Can be used as a type for the #defaults
 # The folder must be named identically to the collection you defined in your _config.yml file, with the addition of the preceding _ character.
 # Remember to define everything as a collection that you want to be able to search for.
+# The files in the _docs have the number prefix so the previous and next buttons work as expected and not alphabetically.
 collections:
   docs:
     output: true

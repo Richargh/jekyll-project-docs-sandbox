@@ -1,4 +1,6 @@
 ---
+permalink: /docs/license/
+title: "License"
 ---
 
 The MIT License (MIT)
