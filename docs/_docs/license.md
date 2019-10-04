@@ -1,9 +1,4 @@
 ---
-layout: home
-title: License
-permalink: /docs/license/
-sidebar:
-  nav: "docs"
 ---
 
 The MIT License (MIT)

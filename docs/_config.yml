@@ -159,11 +159,18 @@ compress_html:
   ignore:
     envs: development
 
+# Collections: https://jekyllrb.com/docs/collections/
+# Can be used as a type for the #defaults
+# The folder must be named identically to the collection you defined in your _config.yml file, with the addition of the preceding _ character.
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
 
 # Front Matter Defaults (https://jekyllrb.com/docs/configuration/front-matter-defaults/)
 # so you don't need to write values like the page template for each file
 defaults:
-  # _posts
+  # _pages
   - scope:
       path: "" # an empty string here means all files in the project
       # define the type so you don't set defaults for every file (.css files would not benefit)
@@ -172,17 +179,19 @@ defaults:
       type: pages
     values:
       layout: single
+  # _docs
   - scope:
-      path: "docs"
-      type: pages
+      path: ""
+      type: docs
     values:
       layout: single
+      sidebar:
+        nav: "docs"
+  # _posts
   - scope:
-      path: "_posts"
+      path: ""
       type: posts
     values:
       layout: single
       read_time: true
       related: true
-
-# https://jekyllrb.com/docs/collections/
